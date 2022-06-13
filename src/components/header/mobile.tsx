@@ -2,11 +2,13 @@ import CustomLink from "@/common/link";
 import {
   CloseButton,
   IconButton,
+  Text,
   useColorModeValue,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import { List } from "phosphor-react";
+import ChangeTheme from "@/components/theme";
 import Links from "./links";
 
 const Mobile = () => {
@@ -30,7 +32,6 @@ const Mobile = () => {
         flexDirection="column"
         p={2}
         pb={4}
-        m={2}
         bg={bg}
         spacing={3}
       >
@@ -41,9 +42,10 @@ const Mobile = () => {
             href={link.href}
             external={link.external}
           >
-            {link.title}
+            <Text>{link.title}</Text>
           </CustomLink>
         ))}
+        <ChangeTheme />
       </VStack>
     </>
   );

@@ -9,7 +9,7 @@ const CustomLink = (props: LinkProps) => {
       <Link isExternal={props.external}>
         <HStack spacing={2}>
           {props.icon}
-          <Text>{props.children}</Text>
+          {props.children}
         </HStack>
       </Link>
     </NextLink>

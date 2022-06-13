@@ -7,23 +7,17 @@ import {
   Image,
   Heading,
   Container,
+  Text,
 } from "@chakra-ui/react";
 import Mobile from "./mobile";
 import Links from "./links";
 import CustomLink from "@/common/link";
-import { LinkProps } from "@/interfaces/link";
+import ChangeTheme from "@/components/theme";
 
 const Header = () => {
   const bg = useColorModeValue("white", "gray.800");
   return (
-    <Box
-      as="header"
-      bg={bg}
-      w="full"
-      px={{ base: 2, sm: 4 }}
-      py={4}
-      shadow="md"
-    >
+    <Box as="header" bg={bg} w="full" px={{ base: 2, sm: 4 }} py={4} borderBottomWidth="1px">
       <Container maxW="90%">
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <CustomLink href="/">
@@ -37,12 +31,8 @@ const Header = () => {
               <Heading fontSize="16px">midubot</Heading>
             </HStack>
           </CustomLink>
-          <HStack display="flex" alignItems="center" spacing={1}>
-            <HStack
-              spacing={8}
-              mr={1}
-              display={{ base: "none", md: "inline-flex" }}
-            >
+          <HStack display="flex" alignItems="center" spacing={5}>
+            <HStack spacing={8} display={{ base: "none", md: "flex" }}>
               {Links.map((link) => (
                 <CustomLink
                   key={link.title}
@@ -51,10 +41,11 @@ const Header = () => {
                   external={link.external}
                   icon={link.icon}
                 >
-                  {link.title}
+                  <Text>{link.title}</Text>
                 </CustomLink>
               ))}
             </HStack>
+            <ChangeTheme />
             <Box display={{ base: "inline-flex", md: "none" }}>
               <Mobile />
             </Box>
