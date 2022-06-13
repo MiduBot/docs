@@ -7,7 +7,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { List } from "phosphor-react";
-import { Links } from "./links";
+import Links from "./links";
 
 const Mobile = () => {
   const bg = useColorModeValue("white", "gray.800");
@@ -38,7 +38,7 @@ const Mobile = () => {
         {Links.map((link) => (
           <CustomLink
             key={link.title}
-            href={link.slug}
+            href={link.href}
             external={link.external}
           >
             {link.title}

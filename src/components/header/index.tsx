@@ -9,8 +9,9 @@ import {
   Container,
 } from "@chakra-ui/react";
 import Mobile from "./mobile";
-import { Links } from "./links";
+import Links from "./links";
 import CustomLink from "@/common/link";
+import { LinkProps } from "@/interfaces/link";
 
 const Header = () => {
   const bg = useColorModeValue("white", "gray.800");
@@ -38,15 +39,17 @@ const Header = () => {
           </CustomLink>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
-              spacing={5}
+              spacing={8}
               mr={1}
               display={{ base: "none", md: "inline-flex" }}
             >
               {Links.map((link) => (
                 <CustomLink
                   key={link.title}
-                  href={link.slug}
+                  title={link.title}
+                  href={link.href}
                   external={link.external}
+                  icon={link.icon}
                 >
                   {link.title}
                 </CustomLink>
