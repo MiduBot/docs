@@ -17,7 +17,7 @@ import ChangeTheme from "@/components/theme";
 const Header = () => {
   const bg = useColorModeValue("white", "gray.800");
   return (
-    <Box as="header" bg={bg} w="full" px={{ base: 2, sm: 4 }} py={4} borderBottomWidth="1px">
+    <Box as="header" position="sticky" top="0" bg={bg} w="full" px={{ base: 2, sm: 4 }} py={4} borderBottomWidth="1px" shadow="sm">
       <Container maxW="90%">
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <CustomLink href="/">

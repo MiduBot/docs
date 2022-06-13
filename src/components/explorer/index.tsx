@@ -33,7 +33,7 @@ const Index = (props: ExplorerProps) => {
         >
           Documents
         </Button>
-        <Box as="main">{props.children}</Box>
+        <Box as="main" pt="6">{props.children}</Box>
       </Box>
     </Box>
   );
