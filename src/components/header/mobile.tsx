@@ -36,7 +36,11 @@ const Mobile = () => {
       >
         <CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
         {Links.map((link) => (
-          <CustomLink key={link.title} href={link.slug}>
+          <CustomLink
+            key={link.title}
+            href={link.slug}
+            external={link.external}
+          >
             {link.title}
           </CustomLink>
         ))}

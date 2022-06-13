@@ -10,7 +10,7 @@
 @font-face {
   font-family: "Inter-Semibold";
   src: url("/fonts/Inter-Semibold.woff2") format("woff2");
-  font-style: normal;
+  font-style: bold;
   font-weight: 400;
   font-display: swap;
 }

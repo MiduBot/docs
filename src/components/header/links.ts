@@ -1,10 +1,12 @@
 export const Links = [
   {
-    title: "Home",
-    slug: "/",
+    title: "Discord",
+    slug: "https://discord.gg/midudev",
+    external: true
   },
   {
     title: "Github",
     slug: "https://github.com/MiduBot/bot",
+    external: true
   },
 ];

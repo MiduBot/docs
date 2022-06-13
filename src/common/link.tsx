@@ -4,13 +4,14 @@ import { Link } from "@chakra-ui/react";
 
 type LinkProps = {
   href: string;
+  external?: boolean;
   children: React.ReactNode;
 };
 
 const CustomLink = (props: LinkProps) => {
   return (
     <NextLink href={props.href} passHref>
-      <Link>{props.children}</Link>
+      <Link isExternal={props.external}>{props.children}</Link>
     </NextLink>
   );
 };
