@@ -6,13 +6,19 @@ import theme from "@/theme";
 import "@/styles/global.css";
 import Layout from "@/layout";
 
+// nProgress ->
+import NextProgress from "next-progress";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <>
+      <NextProgress delay={300} options={{ showSpinner: false }} />
+      <ChakraProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </>
   );
 }
 
