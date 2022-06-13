@@ -6,7 +6,7 @@ import { LinkProps } from "@/interfaces/link";
 const CustomLink = (props: LinkProps) => {
   return (
     <NextLink href={props.href} passHref>
-      <Link isExternal={props.external}>
+      <Link isExternal={props.external} mb={props.mb}>
         <HStack spacing={2}>
           {props.icon}
           {props.children}

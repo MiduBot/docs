@@ -6,6 +6,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { postFilePaths, POSTS_PATH } from "@/utils/mdx";
 import { DocumentProps } from "@/interfaces/document";
+import Explorer from "@/components/explorer";
 
 type DocPageProps = {
   source: MDXRemoteSerializeResult;
@@ -15,13 +16,13 @@ type DocPageProps = {
 const DocPage = ({ source, frontMatter }: DocPageProps) => {
   return (
     <>
-      <article>
+      <Explorer>
         <h1>{frontMatter.title}</h1>
         <p>{frontMatter.date}</p>
         <div>
           <MDXRemote {...source} />
         </div>
-      </article>
+      </Explorer>
     </>
   );
 };
