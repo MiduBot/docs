@@ -15,6 +15,7 @@ const theme = extendTheme({
   fonts: {
     body: "Inter-Regular, sans-serif",
     heading: "Inter-Semibold, sans-serif",
+    mono: "Cascadia-Code, monospace",
   },
   styles: {
     global: (props: ChakraProps) => ({

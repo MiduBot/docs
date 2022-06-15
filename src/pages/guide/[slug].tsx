@@ -1,12 +1,17 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { postFilePaths, POSTS_PATH } from "@/utils/mdx";
+
+import { GetStaticPaths, GetStaticProps } from "next";
+import { Heading } from "@chakra-ui/react";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import { DocumentProps } from "@/interfaces/document";
 import Explorer from "@/components/explorer";
+
+import components from "@/mdx";
+import rehypePrismPlus from "rehype-prism-plus";
 
 type DocPageProps = {
   source: MDXRemoteSerializeResult;
@@ -17,11 +22,10 @@ const DocPage = ({ source, frontMatter }: DocPageProps) => {
   return (
     <>
       <Explorer>
-        <h1>{frontMatter.title}</h1>
-        <p>{frontMatter.date}</p>
-        <div>
-          <MDXRemote {...source} />
-        </div>
+        <Heading mt={2} mb={5} as="h2" fontSize="5xl">
+          {frontMatter.title}
+        </Heading>
+        <MDXRemote {...source} components={components} />
       </Explorer>
     </>
   );
@@ -36,7 +40,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     // remark/rehype plugins:
     mdxOptions: {
       remarkPlugins: [require("remark-code-titles")],
-      // rehypePlugins: [mdxPrism, rehypeSlug, rehypeAutolinkHeadings],
+      rehypePlugins: [rehypePrismPlus],
     },
     scope: data,
   });

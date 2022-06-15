@@ -9,6 +9,9 @@ import Layout from "@/layout";
 // nProgress ->
 import NextProgress from "next-progress";
 
+// Prism Code Highlighting ->
+import "@/styles/prism-one-dark.css";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>

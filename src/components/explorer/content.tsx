@@ -18,7 +18,7 @@ const ExplorerContent = (props: ExplorerProps) => {
       w="60"
       {...props}
     >
-      <Flex direction="column" as="nav" aria-label="Main Explorer" mt="4">
+      <Flex direction="column" as="nav" aria-label="Main Explorer" mt="6">
         {Guide.map((item) => (
           <CustomLink
             key={item.name}
