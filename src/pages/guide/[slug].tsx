@@ -8,7 +8,6 @@ import { Heading } from "@chakra-ui/react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { DocumentProps } from "@/interfaces/document";
-import Explorer from "@/components/explorer";
 
 import components from "@/mdx";
 import rehypePrismPlus from "rehype-prism-plus";
@@ -21,12 +20,10 @@ type DocPageProps = {
 const DocPage = ({ source, frontMatter }: DocPageProps) => {
   return (
     <>
-      <Explorer>
-        <Heading mt={2} mb={5} as="h2" fontSize="5xl">
-          {frontMatter.title}
-        </Heading>
-        <MDXRemote {...source} components={components} />
-      </Explorer>
+      <Heading mt={2} mb={5} as="h2" fontSize="5xl">
+        {frontMatter.title}
+      </Heading>
+      <MDXRemote {...source} components={components} />
     </>
   );
 };

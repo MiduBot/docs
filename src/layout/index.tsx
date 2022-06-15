@@ -1,13 +1,14 @@
 import Header from "@/components/header";
 import { LayoutProps } from "@/interfaces/layout";
 import { Container } from "@chakra-ui/react";
+import Explorer from "@/components/explorer";
 
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
       <Container maxW="90%">
-      {children}
+        <Explorer>{children}</Explorer>
       </Container>
     </>
   );
