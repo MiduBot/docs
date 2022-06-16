@@ -27,21 +27,21 @@ const components = {
     </Heading>
   ),
   p: (props: TextProps) => (
-    <Text as="p" mt={3} mb={3}>
+    <Text as="p" mt={3} mb={3} fontSize="16px">
       {props.children}
     </Text>
   ),
   ol: (props: ListProps) => (
-    <OrderedList as="ol" mt={4} mb={4}>
+    <OrderedList as="ol" mt={4} mb={4} fontSize="16px">
       {props.children}
     </OrderedList>
   ),
   ul: (props: ListProps) => (
-    <UnorderedList as="ul" mt={4} mb={4}>
+    <UnorderedList as="ul" mt={4} mb={4} fontSize="16px">
       {props.children}
     </UnorderedList>
   ),
-  li: (props: ListItemProps) => <ListItem>{props.children}</ListItem>,
+  li: (props: ListItemProps) => <ListItem fontSize="16px">{props.children}</ListItem>,
 };
 
 export default components;

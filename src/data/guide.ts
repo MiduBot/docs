@@ -1,7 +1,7 @@
 const Guide = [
   {
     name: "Getting Started",
-    slug: "getting-started",
+    slug: "/guide/getting-started",
   },
   {
     name: "Guide",

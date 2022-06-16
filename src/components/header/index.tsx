@@ -15,9 +15,19 @@ import CustomLink from "@/common/link";
 import ChangeTheme from "@/components/theme";
 
 const Header = () => {
-  const bg = useColorModeValue("white", "gray.800");
+  const bg = useColorModeValue("bg.light", "bg.dark");
   return (
-    <Box as="header" position="sticky" top="0" bg={bg} w="full" px={{ base: 2, sm: 4 }} py={4} borderBottomWidth="1px" shadow="sm">
+    <Box
+      as="header"
+      position="sticky"
+      top="0"
+      bg={bg}
+      w="full"
+      px={{ base: 2, sm: 4 }}
+      py={4}
+      borderBottomWidth="2px"
+      shadow="sm"
+    >
       <Container maxW="90%">
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <CustomLink href="/">

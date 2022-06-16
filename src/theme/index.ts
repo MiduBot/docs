@@ -9,7 +9,7 @@ const theme = extendTheme({
   colors: {
     bg: {
       light: "#f2f2f3",
-      dark: "#1D1D1D",
+      dark: "#1E1E1E",
     },
   },
   fonts: {

@@ -14,7 +14,7 @@ const ExplorerContent = (props: ExplorerProps) => {
       pb="10"
       overflowX="hidden"
       overflowY="auto"
-      borderRightWidth="1px"
+      borderRightWidth="2px"
       w="60"
       {...props}
     >
@@ -27,7 +27,7 @@ const ExplorerContent = (props: ExplorerProps) => {
             mb={2}
             icon={<File size={16} weight="bold" />}
           >
-            <Text>{item.name}</Text>
+            <Text >{item.name}</Text>
           </CustomLink>
         ))}
       </Flex>
