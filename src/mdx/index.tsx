@@ -47,7 +47,11 @@ const components = {
   li: (props: ListItemProps) => (
     <ListItem fontSize="16px">{props.children}</ListItem>
   ),
-  a: (props: LinkProps) => <Link isExternal>{props.children}</Link>,
+  a: (props: LinkProps) => (
+    <Link textDecoration="underline" isExternal>
+      {props.children}
+    </Link>
+  ),
 };
 
 export default components;
