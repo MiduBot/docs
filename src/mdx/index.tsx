@@ -7,7 +7,10 @@ import {
   Text,
   TextProps,
   UnorderedList,
+  Link,
+  LinkProps,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 // Export custom components ->
 const components = {
@@ -41,7 +44,10 @@ const components = {
       {props.children}
     </UnorderedList>
   ),
-  li: (props: ListItemProps) => <ListItem fontSize="16px">{props.children}</ListItem>,
+  li: (props: ListItemProps) => (
+    <ListItem fontSize="16px">{props.children}</ListItem>
+  ),
+  a: (props: LinkProps) => <Link isExternal>{props.children}</Link>,
 };
 
 export default components;
